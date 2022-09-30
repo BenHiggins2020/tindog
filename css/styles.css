@@ -1,0 +1,246 @@
+#title{
+    background-color:#ff4c68 ;
+    color: #ffff
+}
+h1{
+    font: 3em Montserrat;
+    line-height: 1.5;
+}
+
+h2{
+    font-family: Montserrat;
+    font-size: 1.5rem;
+
+}
+
+
+.container-fluid{
+    padding: 3% 15% 7%
+}
+
+.navbar-brand{
+    font-size: 2em;
+    font-family: Ubuntu;
+    font-weight: bold;
+}
+.navbar{
+    padding: 0 0 4.5rem;
+}
+.nav-item{
+    padding: 0 0 18px;
+}
+
+.nav-link{
+    font: 1.2rem;
+    font-family: Montserrat-light;
+}
+
+body{
+    font-family: Montserrat;
+}
+
+/* created my own class!!  */
+.download-button{
+    margin: 5% 3% 5% 0;
+}
+
+/* Title Image */
+
+.title-image{
+    /* width:.6%; */
+    transform: rotate(30deg); 
+    /* bottom: 25%;  */
+    /* left: 60%; */
+    right:18%;
+    position: absolute;
+}
+
+/* media query */
+@media (max-width:1028px){
+    .title-image{
+        width:60%;
+        transform:rotate(0deg);
+        position: static;
+    }
+    #title{
+        text-align: center;
+    }
+
+}
+
+
+/* features */
+
+#features{
+    padding:7% 15%;   
+    background-color: #ffff;
+    position: relative; 
+    /* this is below the title image so it will be on top!  */
+ 
+}
+
+.feature-box{
+    text-align: center;
+}
+
+.icon{
+    color: #ef8172;
+    padding: 1rem
+}
+
+.icon:hover{
+    color: #ff4c68;
+}
+
+
+#testimonials{
+    padding: 7% 15%;
+    text-align: center;
+    background-color: #ef8172;
+    color: #ffff;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+}
+
+.testimonials-img{
+    width: 20%;
+    border-radius: 100%;
+    padding-left: 10px;
+    margin: 20px;
+}
+
+.carousel-item{
+    padding: 100px;
+}
+
+#press{
+    background-color: #ef8172;
+    text-align: center;
+}
+.press-logo{
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+#pricing{
+    padding: 7% 15%;
+    font-family: Montserrat;
+    /* font-size: 4.5rem; */
+    text-align: center;
+}
+
+
+.card-header{
+    text-align: center;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 2rem;
+    font: Montserrat;
+    font-weight: 700;
+    
+}
+.card-body{
+    text-align: center;
+}
+
+
+#cta{
+    font-family: Montserrat;
+    font-weight: bolder;
+    text-align: center;
+    background-color: #ff4c68;
+    padding-top: 5%;
+    
+}
+
+#footer{
+    background-color: #ffff;
+    text-align: center;
+    padding:6%
+    /* top, right, left, bottom */
+    
+}
+#footer i{
+    padding: 1%;
+}
+
+/* 
+
+selectors 
+
+read right to left, child to parent
+
+
+
+*/
+
+#title .container-fluid{
+     /* selector1_parent selector2_child { } */
+    /* targets the container fluid class inside the title  */
+   
+}
+.container-fluid #title{
+    /* selects the title id elements inside a container-fluid... */
+    /* not really practical */
+}
+
+.container-fluid h1{
+    /* applys style to h1 inside the container-fluid parent */
+}
+
+
+/* 
+    combined selectors (no space)
+    no  space - read from left to right
+
+*/
+
+h1#title{
+    /* htmlElement#id */
+    /* must occur within the same element */
+}
+
+div.container-fluid{
+    /* divs with containerfluid class */
+}
+
+/* Example 
+
+ <div class=container-fluid>
+
+    <h1 id=title>   
+
+ </div>
+
+ div#title{} <- DOES NOT WORK
+
+*/
+
+
+/* 
+
+SPACE VS NO SPACE
+
+Example) 
+
+        <div class="container">
+
+            <h1 class="title"> Hello World</h1>
+
+        </div>
+
+        <div class="container-fluid">
+
+            <h1 class="title"> Good Bye World</h1>
+
+        </div>
+
+
+    .container .title{} <- this will style the Hello World
+
+    .container.title{} <- does not work, looking for html class of container and title 
+        <h1 class "container title"> ... must be in the same html element
+
+*/
