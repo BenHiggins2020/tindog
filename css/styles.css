@@ -122,12 +122,19 @@ body{
     margin: 20px 20px 50px;
 }
 
+
+
+
+
+
+/*Pricing*/
 #pricing{
-    padding: 7% 15%;
     font-family: Montserrat;
     /* font-size: 4.5rem; */
     text-align: center;
+    padding: 7% 15%;
 }
+   
 
 
 .card-header{
